@@ -1,0 +1,55 @@
+.home-section
+    height: 100vh
+
+.home-section__content
+    width: 50%
+    padding: 0 5rem
+
+.content-margin
+    margin-bottom: 0.25rem
+    padding-inline-start: 2px
+
+.content-subtitle
+    color: #ababab
+    margin-bottom: 0.5rem
+    line-height: 1.2
+
+.content-paragraph
+    line-height: 1.5
+    width: 60%
+    display: block
+    letter-spacing: .25px
+    padding-inline-start: 2px
+
+.home-contact__button
+    height: auto
+    background-color: transparent !important
+    margin-block: 24px
+    padding: 12px 25px
+    border: 1px solid
+
+.content-title
+    margin: 0px
+    line-height: 1.2
+
+.scroll__text
+    position: fixed
+    right: 0rem
+    bottom: 10rem
+    transform: rotateZ(90deg)
+
+.text-effects
+    // background-image: linear-gradient(45deg, #f11653, #e90364, #f637e3, #8001c6, #5c44e4, #0546ff)
+    background-image: linear-gradient(45deg, #f11653, #e90364, #f637e3, #8001c6, #5c44e4, #0546ff,#5c44e4,#8001c6,#f637e3,#e90364,#f11653)
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    background-size: 200%
+    background-position: 0%
+    animation: text-animation 10s linear infinite
+
+@keyframes text-animation
+    from
+        background-position: 0%
+    to
+        background-position: 200%
