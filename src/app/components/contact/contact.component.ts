@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { GMAIL } from '../../constants/skills.constant';
 
 @Component({
-  selector: 'app-home-section',
-  templateUrl: './home-section.component.html',
-  styleUrl: './home-section.component.scss'
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.scss'
 })
-export class HomeSectionComponent {
-
+export class ContactComponent {
   gmail!: string;
   ngOnInit() {
     this.gmail = GMAIL;

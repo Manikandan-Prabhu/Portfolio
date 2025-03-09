@@ -1,0 +1,29 @@
+<section class="experience">
+  <div class="exp-title flex">
+    <div class="flex title-content">
+      <p>02. <span class="semibold">Where I’ve Worked</span></p>
+    </div>
+    <div class="line"></div>
+  </div>
+  <div class="flex exp-content">
+    <div class="company-list flex flex-column">
+      <ng-container *ngFor="let company of companies">
+        <p class="company-name" [ngClass]="{'company-active company-active-border': selectedDetails?.id === company.id}"
+          (click)="selectedCompany(company.id)">{{company.name}}</p>
+      </ng-container>
+    </div>
+    <div class="company-experience">
+      <ng-container *ngIf="selectedDetails">
+        <div class="role flex">
+          <p>{{selectedDetails.role}} </p><span class="company-active">{{selectedDetails.company}}</span>
+        </div>
+        <p class="period">{{selectedDetails.from}} - {{selectedDetails.to}}</p>
+        <ul class="experience-list">
+          <li *ngFor="let exp of selectedDetails.exp">
+            <p>{{exp}}</p>
+          </li>
+        </ul>
+      </ng-container>
+    </div>
+  </div>
+</section>

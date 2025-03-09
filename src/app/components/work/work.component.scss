@@ -1,0 +1,88 @@
+.experience {
+  min-height: 80vh;
+  margin: auto;
+  padding-block: 3rem 1rem;
+}
+
+.exp-title {
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+}
+
+.title-content {
+  align-items: center;
+  gap: 10px;
+
+  p {
+    font-size: 14px;
+  }
+
+  span {
+    margin-left: 6px;
+    font-size: 22px;
+  }
+}
+
+.line {
+  height: 0.12rem;
+  background: #000;
+  flex: 1 1 0%;
+}
+
+.company-list {
+  width: 30%;
+}
+
+.company-experience {
+  width: 70%;
+  padding-block-start: 8px;
+
+  .role {
+    gap: 8px;
+    align-items: center;
+    font-weight: 600;
+
+    p,
+    span {
+      font-size: 18px;
+    }
+  }
+
+  .period {
+    font-size: 14px;
+    margin-block-end: 1rem;
+  }
+
+  .experience-list {
+    li {
+      margin-inline-start: 20px;
+    }
+
+    p {
+      font-size: 12px;
+      letter-spacing: 0.25px;
+    }
+  }
+}
+
+
+.exp-content {
+  margin-block: 2rem;
+
+  .company-name {
+    font-size: 14px;
+    padding: 8px 15px;
+    border-left: 1px solid #dfdfdf;
+    transition: 0.1s ease;
+    cursor: pointer;
+  }
+}
+
+.company-active-border {
+  border-left: 3px solid #f11653 !important;
+}
+
+.company-active {
+  color: #f11653;
+}

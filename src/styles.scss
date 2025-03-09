@@ -1,0 +1,164 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #efefef;
+    color: #050505;
+    font-family: "Poppins", sans-serif;
+    --gradient-color: linear-gradient(45deg, #f11653, #e90364, #f637e3, #8001c6, #5c44e4, #0546ff, #5c44e4, #8001c6, #f637e3, #e90364, #f11653);
+    --subtext-color: #ababab;
+    --highlight-color: #C91044;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 54px;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+h4 {
+    font-size: 36px;
+}
+
+h5 {
+    font-size: 32px;
+}
+
+h6 {
+    font-size: 28px;
+}
+
+h7 {
+    font-size: 26px;
+}
+
+p {
+    font-size: 18px;
+}
+
+div {
+    font-size: 16px;
+}
+
+span {
+    font-size: 14px;
+}
+
+strong {
+    @extend .semibold
+}
+
+button {
+    cursor: pointer;
+    @extend .font-family;
+
+    span {
+        font-size: 12px;
+    }
+}
+
+.font-family {
+    font-family: "Poppins", sans-serif !important;
+}
+
+.light {
+    font-weight: 300;
+    font-style: normal;
+}
+
+.regular {
+    font-weight: 400;
+    font-style: normal;
+}
+
+.medium {
+    font-weight: 500;
+    font-style: normal;
+}
+
+.semibold {
+    font-weight: 600;
+    font-style: normal;
+}
+
+.bold {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.extrabold {
+    font-weight: 800;
+    font-style: normal;
+}
+
+.light-italic {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.regular-italic {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.medium-italic {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.semibold-italic {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.bold-italic {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.extrabold-italic {
+    font-weight: 800;
+    font-style: italic;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.text-effects {
+    background-image: var(--gradient-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200%;
+    background-position: 0%;
+    animation: text-animation 10s linear infinite;
+}
+
+@keyframes text-animation {
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 200%;
+    }
+}

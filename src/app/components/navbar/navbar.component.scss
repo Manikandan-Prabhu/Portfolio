@@ -1,0 +1,28 @@
+.navbar {
+  height: 4rem;
+  padding-inline: 2rem;
+  justify-content: space-between;
+  align-items: center;
+
+  // position: sticky;
+  // top: 0;
+  // background: #efefef;
+  // z-index: 10;
+
+  // box-shadow: 1px 1px 10px #dcdcdc;
+}
+
+.links {
+  gap: 20px;
+  align-items: center;
+
+  a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .download-resume {
+    letter-spacing: 0.25px;
+  }
+}

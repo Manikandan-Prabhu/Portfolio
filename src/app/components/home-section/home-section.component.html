@@ -1,21 +1,15 @@
-<section class="home-section flex">
-  <div class="home-section__content">
-    <div class="medium-italic content-margin">Hi, my name is</div>
+<div class="home-section flex flex-center">
+  <div>
+    <span class="medium content-margin">Hi, my name is</span>
     <h3 class="semibold content-title text-effects">Manikandan Prabhu.</h3>
-    <!-- <h3 class="semibold">I craft digital experience.</h3> -->
-    <h3 class="semibold content-subtitle">I contsruct the digital realms.</h3>
+    <h4 class="semibold content-subtitle">Software Engineer</h4>
     <span class="normal content-paragraph">
       I'm a software engineer specializing in building exceptional digital
       experience in <strong>Angular.</strong> I'm driven to elevate digital
       landscape through elegent code and thoughtful design.
     </span>
-    <button
-      mat-flat-button
-      class="home-contact__button semibold font-family text-effects"
-    >
-      <p>Let's work together</p>
+    <button mat-stroked-button class="home-contact__button" (click)="sendMail()">
+      Let's work together
     </button>
   </div>
-
-  <div class="scroll__text">scroll -----------------&gt;</div>
-</section>
+</div>

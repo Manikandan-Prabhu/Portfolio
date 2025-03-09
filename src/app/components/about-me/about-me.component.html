@@ -1,0 +1,45 @@
+<div class="about-me" id="about-me">
+  <div class="flex about-me-wrapper">
+    <div class="about-me-content flex flex-column">
+
+      <div class="section-title flex">
+        <div class="flex title-content">
+          <p>01. <span class="semibold">About me</span></p>
+        </div>
+        <div class="line"></div>
+      </div>
+
+      <div class="section-content">
+        <p>
+          Hello! My name is Manikandan Prabhu, and I love building efficient, scalable, and user-friendly web
+          applications.
+          My journey in web development started with a passion for creating smooth and responsive user interfaces, which
+          led me to specialize in Angular development.
+        </p>
+        <p>
+          Over the years, I have <strong>worked on e-commerce</strong> and <strong>storefront applications</strong>,
+          focusing on performance optimization,
+          reusable UI components, and state management.
+          My expertise lies in <strong>Angular, TypeScript, RxJS,</strong> and <strong>front-end architecture</strong>,
+          ensuring seamless and scalable
+          solutions.
+        </p>
+        <p>
+          I'm always eager to explore new technologies and improve my skills. Whether it's building high-performance
+          applications or mentoring developers, I enjoy contributing to impactful projects.
+        </p>
+        <p>Here are a few technologies I've been working with recently:</p>
+        <ul>
+          <ng-container *ngFor="let skill of skillDetails">
+            <li class="skill-list">
+              <p><strong>{{skill.domain}}:</strong> {{skill.skills}}</p>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+    <div class="about-me-img">
+      <div class="profile-img"></div>
+    </div>
+  </div>
+</div>
