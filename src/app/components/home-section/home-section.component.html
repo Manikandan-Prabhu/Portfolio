@@ -1,4 +1,5 @@
-<div class="home-section flex flex-center" [@fadeIn]="state">
+<div class="home-section flex flex-center" [@fadeIn]="state" appIntersectionObserver
+  (isVisible)="onVisibilityChange($event)">
   <div>
     <span class="medium content-margin">Hi, my name is</span>
     <h3 class="semibold content-title text-effects">Manikandan Prabhu.</h3>

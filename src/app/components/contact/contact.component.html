@@ -1,4 +1,5 @@
-<div class="contact flex flex-column flex-center" [@fadeIn]="state">
+<div class="contact flex flex-column flex-center" [@fadeIn]="state" appIntersectionObserver
+  (isVisible)="onVisibilityChange($event)">
   <span>03. What's Next</span>
   <h4>Get In Touch</h4>
   <p>I'm actively looking for new opportunities where I can contribute my expertise in Angular and frontend development.
