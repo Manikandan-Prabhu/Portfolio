@@ -9,8 +9,10 @@ body {
     color: #050505;
     font-family: "Poppins", sans-serif;
     --gradient-color: linear-gradient(45deg, #f11653, #e90364, #f637e3, #8001c6, #5c44e4, #0546ff, #5c44e4, #8001c6, #f637e3, #e90364, #f11653);
+    --text-color: #000;
     --subtext-color: #ababab;
     --highlight-color: #C91044;
+    --purple-gradient: linear-gradient(0deg, #f637e3 0%, #8001c6 100%)
 }
 
 h1 {

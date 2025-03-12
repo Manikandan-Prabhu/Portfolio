@@ -15,10 +15,12 @@ import { WorkComponent } from './components/work/work.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { IntersectionObserverDirective } from './directives/intersection-observer.directive.directive';
 @NgModule({
-  declarations: [AppComponent, HomeSectionComponent, SocialLinksComponent, AboutMeComponent, WorkComponent, ContactComponent, NavbarComponent, LandingPageComponent],
+  declarations: [AppComponent, HomeSectionComponent, SocialLinksComponent, AboutMeComponent, WorkComponent, ContactComponent, NavbarComponent, LandingPageComponent, IntersectionObserverDirective],
   imports: [BrowserModule, BrowserAnimationsModule, MatButtonModule, AppRoutingModule, MatTabsModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
+  exports: [IntersectionObserverDirective]
 })
 export class AppModule { }
