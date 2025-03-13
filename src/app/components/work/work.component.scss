@@ -16,9 +16,11 @@
 
   p {
     font-size: 14px;
+    color: var(--highlight-color);
   }
 
   span {
+    color: var(--text-color);
     margin-left: 6px;
     font-size: 22px;
   }
@@ -50,8 +52,10 @@
   }
 
   .period {
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 500;
     margin-block-end: 1rem;
+    color: var(--highlight-color);
   }
 
   .experience-list {
@@ -72,15 +76,29 @@
 
   .company-name {
     font-size: 14px;
+    font-weight: 500;
     padding: 8px 15px;
-    border-left: 1px solid #dfdfdf;
+    border-left: 1px solid var(--subtext-color);
     transition: 0.1s ease;
     cursor: pointer;
+    position: relative;
   }
 }
 
-.company-active-border {
-  border-left: 3px solid #f11653 !important;
+.company-active.company-name {
+  background: var(--purple-gradient);
+  background-clip: text;
+  color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 0px;
+    width: 3px;
+    height: 100%;
+    background: var(--purple-gradient);
+  }
 }
 
 .company-active {

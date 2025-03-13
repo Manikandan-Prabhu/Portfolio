@@ -5,14 +5,18 @@
 }
 
 body {
-    background: #efefef;
-    color: #050505;
-    font-family: "Poppins", sans-serif;
+    --background: #efefef;
     --gradient-color: linear-gradient(45deg, #f11653, #e90364, #f637e3, #8001c6, #5c44e4, #0546ff, #5c44e4, #8001c6, #f637e3, #e90364, #f11653);
-    --text-color: #000;
+    --text-color: #050505;
     --subtext-color: #ababab;
-    --highlight-color: #C91044;
-    --purple-gradient: linear-gradient(0deg, #f637e3 0%, #8001c6 100%)
+    --highlight-color: #f11653;
+    // --highlight-color: #C91044;
+    --purple-gradient: linear-gradient(0deg, #8001c6 0%, #f637e3 100%);
+    --nav-height: 4rem;
+
+    background: var(--background);
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -56,12 +60,15 @@ span {
 }
 
 strong {
-    @extend .semibold
+    @extend .semibold;
+    color: var(--highlight-color)
 }
 
 button {
     cursor: pointer;
     @extend .font-family;
+    color: var(--highlight-color) !important;
+    border-color: var(--highlight-color) !important;
 
     span {
         font-size: 12px;

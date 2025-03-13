@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GMAIL } from '../../constants/skills.constant';
 
@@ -9,9 +9,8 @@ import { GMAIL } from '../../constants/skills.constant';
 })
 export class LandingPageComponent {
 
-  gmail!: string
-
-  constructor(private route: ActivatedRoute, private el: ElementRef, private renderer: Renderer2) { }
+  gmail!: string;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.gmail = GMAIL;

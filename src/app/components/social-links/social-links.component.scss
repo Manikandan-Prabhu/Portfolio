@@ -10,12 +10,18 @@
         .social__links {
             height: 24px;
             width: 24px;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: translateY(-4px);
+            }
         }
+
     }
 
     .line {
         width: 0.12rem;
         height: 7rem;
-        background: #000;
+        background: var(--purple-gradient);
     }
 }
