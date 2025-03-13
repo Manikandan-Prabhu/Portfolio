@@ -102,5 +102,11 @@
 }
 
 .company-active {
-  color: #f11653;
+  color: var(--highlight-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .experience {
+    min-height: 70vh;
+  }
 }

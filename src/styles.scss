@@ -6,6 +6,8 @@
 
 body {
     --background: #efefef;
+    --content-width: 60%;
+    --content-padding: 0 5rem;
     --gradient-color: linear-gradient(45deg, #f11653, #e90364, #f637e3, #8001c6, #5c44e4, #0546ff, #5c44e4, #8001c6, #f637e3, #e90364, #f11653);
     --text-color: #050505;
     --subtext-color: #ababab;
@@ -43,10 +45,6 @@ h6 {
     font-size: 28px;
 }
 
-h7 {
-    font-size: 26px;
-}
-
 p {
     font-size: 18px;
 }
@@ -79,16 +77,6 @@ button {
     font-family: "Poppins", sans-serif !important;
 }
 
-.light {
-    font-weight: 300;
-    font-style: normal;
-}
-
-.regular {
-    font-weight: 400;
-    font-style: normal;
-}
-
 .medium {
     font-weight: 500;
     font-style: normal;
@@ -102,41 +90,6 @@ button {
 .bold {
     font-weight: 700;
     font-style: normal;
-}
-
-.extrabold {
-    font-weight: 800;
-    font-style: normal;
-}
-
-.light-italic {
-    font-weight: 300;
-    font-style: italic;
-}
-
-.regular-italic {
-    font-weight: 400;
-    font-style: italic;
-}
-
-.medium-italic {
-    font-weight: 500;
-    font-style: italic;
-}
-
-.semibold-italic {
-    font-weight: 600;
-    font-style: italic;
-}
-
-.bold-italic {
-    font-weight: 700;
-    font-style: italic;
-}
-
-.extrabold-italic {
-    font-weight: 800;
-    font-style: italic;
 }
 
 .flex {
@@ -169,5 +122,74 @@ button {
 
     to {
         background-position: 200%;
+    }
+}
+
+//Loader Animation
+
+.fade-out {
+    animation: fadeOut 0.9s ease-out forwards;
+}
+
+#loader {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h4,
+    .dots span {
+        font-size: 54px;
+        font-style: italic;
+        color: transparent;
+        -webkit-text-stroke: 2px #f11653;
+    }
+
+    .dots span {
+        opacity: 1;
+        animation: fadeIn 1s infinite;
+    }
+
+    .dots span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .dots span:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+
+    .dots span:nth-child(3) {
+        animation-delay: 0.6s;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    body {
+        --content-width: 70% !important;
+        --content-padding: 0rem;
     }
 }

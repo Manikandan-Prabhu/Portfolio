@@ -1,6 +1,6 @@
 .content-area {
   width: var(--content-width, 60%);
-  padding: 0 5rem;
+  padding: var(--content-padding);
 }
 
 .social-area {
