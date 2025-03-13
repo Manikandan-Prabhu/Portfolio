@@ -1,0 +1,42 @@
+:root {
+    --container-height: 90vh;
+    --text-font-size: 64px;
+    --subtext-font-size: 52px;
+    --content-width: 60%;
+}
+
+.home-section {
+    height: var(--container-height, 90vh);
+}
+
+.content-margin {
+    color: var(--highlight-color);
+    padding-inline-start: 2px;
+}
+
+.content-subtitle {
+    color: var(--subtext-color, #ababab);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-size: var(--subtext-font-size, 52px);
+}
+
+.content-paragraph {
+    line-height: 1.5;
+    width: 70%;
+    display: block;
+    letter-spacing: 0.25px;
+    padding-inline-start: 2px;
+    font-size: 12px;
+}
+
+.home-contact__button {
+    margin-block: 24px;
+    letter-spacing: 0.25px;
+}
+
+.content-title {
+    margin-top: 1rem;
+    line-height: 1.2;
+    font-size: var(--text-font-size, 64px);
+}

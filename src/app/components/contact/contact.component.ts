@@ -3,16 +3,15 @@ import { fadeInAnimation } from '../../constants/animations';
 import { CommonService } from '../../services/common.service';
 
 @Component({
-  selector: 'app-home-section',
-  templateUrl: './home-section.component.html',
-  styleUrl: './home-section.component.scss',
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.scss',
   animations: [fadeInAnimation]
 })
-export class HomeSectionComponent {
+export class ContactComponent {
   state = "out";
 
   constructor(private commonService: CommonService) { }
-
   onVisibilityChange(isVisible: boolean) {
     this.state = this.commonService.onVisibilityChange(isVisible);
   }

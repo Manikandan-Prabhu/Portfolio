@@ -1,12 +1,10 @@
-<div class="flex flex-column social">
-  <ng-container *ngFor="let link of socials">
-    <a
-      *ngIf="link?.showLink"
-      [href]="link?.link"
-      target="_blank"
-      class="social__links"
-    >
-      <img [src]="'assets/social-links/' + link?.image" [alt]="link?.alt" />
-    </a>
-  </ng-container>
+<div class="flex flex-column social-wrapper">
+  <div class="flex flex-column social">
+    <ng-container *ngFor="let link of socials">
+      <a *ngIf="link?.showLink" [href]="link?.link" target="_blank" class="social__links">
+        <img [src]="'assets/social-links/' + link?.image" [alt]="link?.alt" />
+      </a>
+    </ng-container>
+  </div>
+  <div class="line"></div>
 </div>
