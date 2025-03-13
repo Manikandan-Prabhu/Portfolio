@@ -1,0 +1,11 @@
+<nav class="navbar fixed flex" #navRef>
+  <div class="logo">
+    <h6>M.</h6>
+  </div>
+  <div class="links flex">
+    <a routerLink="/" fragment="about">01. About Me</a>
+    <a routerLink="/" fragment="experience">02. Experience</a>
+    <a routerLink="/" fragment="contact">03. Contact</a>
+    <button mat-stroked-button class="download-resume" (click)="downloadResume()">Resume</button>
+  </div>
+</nav>
