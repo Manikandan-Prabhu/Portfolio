@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Output, EventEmitter, AfterViewInit, OnDestroy } from '@angular/core';
+import { Directive, ElementRef, Output, EventEmitter, AfterViewInit, OnDestroy, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appIntersectionObserver]'
@@ -6,17 +6,22 @@ import { Directive, ElementRef, Output, EventEmitter, AfterViewInit, OnDestroy }
 export class IntersectionObserverDirective implements AfterViewInit, OnDestroy {
   @Output() isVisible = new EventEmitter<boolean>();
   private observer!: IntersectionObserver;
-
+  isMobileScreen!: boolean;
   constructor(private el: ElementRef) { }
 
   ngAfterViewInit() {
+    this.onResize();
     this.observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         this.isVisible.emit(entry.isIntersecting);
       });
-    }, { threshold: 0.6 });
-
+    }, { threshold: this.isMobileScreen ? 0.6 : 0.4 });
     this.observer.observe(this.el.nativeElement);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.isMobileScreen = !!(window.innerWidth < 600);
   }
 
   ngOnDestroy() {
