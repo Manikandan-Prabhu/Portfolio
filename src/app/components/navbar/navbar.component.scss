@@ -16,14 +16,17 @@
       font-size: 12px;
       font-weight: 500;
       text-decoration: none;
-      // color: #000;
-      color: var(--highlight-color);
+      background: var(--red-gradient);
+      background-size: 250%;
+      background-clip: text;
+      color: transparent;
+      background-position-x: 100%;
       transform: translateY(0px);
       transition: all 0.3s ease;
 
       &:hover {
         transform: translateY(-3px);
-        // color: var(--highlight-color);
+        background-position: 0%;
       }
     }
 
@@ -44,4 +47,74 @@
 
 .shadow {
   box-shadow: 1px 1px 20px #c7c7c7;
+}
+
+
+//CSS for Mobile
+.menu-button {
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+
+  .menu-icon {
+    color: var(--highlight-color);
+  }
+}
+
+.menu-tray {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 4rem 2.5rem;
+  background: var(--background);
+
+  .menu-close {
+    $button-height: 40px;
+    height: $button-height;
+    justify-content: end;
+
+    .menu-button {
+      height: $button-height;
+      width: $button-height;
+
+      .menu-icon {
+        font-size: 34px;
+      }
+    }
+  }
+
+  .menu-items {
+    margin-block: 2.5rem 2rem;
+    gap: 14px;
+    align-items: center;
+    animation: slideIn 800ms ease-in-out forwards;
+
+    a {
+      font-size: 22px !important;
+      height: 40px;
+    }
+
+    .download-resume {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateX(-8px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
 }
