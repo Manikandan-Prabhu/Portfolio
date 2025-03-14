@@ -15,7 +15,7 @@ export class IntersectionObserverDirective implements AfterViewInit, OnDestroy {
       entries.forEach(entry => {
         this.isVisible.emit(entry.isIntersecting);
       });
-    }, { threshold: this.isMobileScreen ? 0.6 : 0.4 });
+    }, { threshold: this.isMobileScreen ? 0.3 : 0.6 });
     this.observer.observe(this.el.nativeElement);
   }
 
