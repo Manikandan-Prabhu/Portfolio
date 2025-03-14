@@ -16,14 +16,17 @@
       font-size: 12px;
       font-weight: 500;
       text-decoration: none;
-      // color: var(--text-color);
-      color: var(--highlight-color);
+      background: var(--red-gradient);
+      background-size: 250%;
+      background-clip: text;
+      color: transparent;
+      background-position-x: 100%;
       transform: translateY(0px);
       transition: all 0.3s ease;
 
       &:hover {
         transform: translateY(-3px);
-        // color: var(--highlight-color);
+        background-position: 0%;
       }
     }
 
