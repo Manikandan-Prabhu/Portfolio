@@ -28,7 +28,7 @@
 
 .line {
   height: 0.12rem;
-  background: #000;
+  background: var(--text-color);
   flex: 1 1 0%;
 }
 
@@ -108,5 +108,35 @@
 @media screen and (max-width: 1024px) {
   .experience {
     min-height: 70vh;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .exp-title {
+    width: 100%;
+    gap: 14px;
+  }
+
+  .company-name {
+    //TODO: hide on mobile screen - Use directive or listener.
+    display: none;
+  }
+
+  .exp-content {
+    flex-direction: column;
+  }
+
+  .company-experience {
+    width: 90%;
+    margin-inline: auto;
+
+    .role {
+      flex-wrap: wrap;
+      gap: 0px;
+    }
+
+    .period {
+      text-align: end;
+    }
   }
 }

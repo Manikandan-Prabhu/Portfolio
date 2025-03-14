@@ -19,3 +19,11 @@
     letter-spacing: 0.25px;
   }
 }
+
+@media screen and (max-width: 599px) {
+  .contact {
+    width: 95%;
+    margin-inline: auto;
+    margin-block-end: 5rem;
+  }
+}

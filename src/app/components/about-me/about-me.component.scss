@@ -1,10 +1,5 @@
-:root {
-  --container-height: 100vh;
-}
-
-
 .about-me {
-  height: var(--container-height, 100vh);
+  height: 100vh;
   align-items: center;
 }
 
@@ -46,7 +41,7 @@
 
 .line {
   height: 0.12rem;
-  background: #000;
+  background: var(--text-color);
   flex: 1 1 0%;
 }
 
@@ -86,6 +81,28 @@
     isolation: isolate;
     width: 100%;
     aspect-ratio: 1;
-    border: 2px solid #000;
+    border: 2px solid var(--text-color);
   }
+}
+
+
+@media screen and (max-width: 599px) {
+  .about-me {
+    height: fit-content;
+
+    .about-me-wrapper {
+      flex-direction: column-reverse;
+      align-items: end;
+
+      .about-me-content {
+        width: 95%;
+        margin-inline: auto;
+      }
+
+      .about-me-img {
+        width: 50%;
+      }
+    }
+  }
+
 }

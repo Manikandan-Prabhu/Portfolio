@@ -3,9 +3,31 @@
     <h6>M.</h6>
   </div>
   <div class="links flex">
-    <a routerLink="/" fragment="about">01. About Me</a>
-    <a routerLink="/" fragment="experience">02. Experience</a>
-    <a routerLink="/" fragment="contact">03. Contact</a>
-    <button mat-stroked-button class="download-resume" (click)="downloadResume()">Resume</button>
+    <ng-container *ngIf="!isMobileScreen; else mobileLinks">
+      <ng-container [ngTemplateOutlet]="routeLinks"></ng-container>
+    </ng-container>
   </div>
 </nav>
+
+<ng-template #mobileLinks>
+  <button type="button" class="menu-button" (click)="toggleMenu()">
+    <span class="material-symbols-outlined menu-icon">menu</span>
+  </button>
+  <div id="menuPanel" class="menu-tray" *ngIf="openMenu" [@slideIn]>
+    <div class="menu-close flex">
+      <button type="button" class="menu-button" (click)="toggleMenu()">
+        <span class="material-symbols-outlined menu-icon">close</span>
+      </button>
+    </div>
+    <div class="flex flex-column menu-items">
+      <ng-container [ngTemplateOutlet]="routeLinks"></ng-container>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #routeLinks>
+  <a routerLink="/" fragment="about" (click)="toggleMenu()">01. About Me</a>
+  <a routerLink="/" fragment="experience" (click)="toggleMenu()">02. Experience</a>
+  <a routerLink="/" fragment="contact" (click)="toggleMenu()">03. Contact</a>
+  <button mat-stroked-button class="download-resume" (click)="downloadResume()">Resume</button>
+</ng-template>
