@@ -29,14 +29,20 @@
   align-items: center;
 
   a {
+
+    background: var(--purple-gradient);
+    background-size: 100% 250%;
+    background-clip: text;
+    background-position-y: 0%;
+
     text-decoration: none;
-    color: #000;
+    color: transparent;
     font-size: 14px;
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      color: var(--highlight-color);
       transform: translateY(-2px);
+      background-position-y: 100%;
     }
   }
 
@@ -69,5 +75,15 @@
   100% {
     opacity: 0;
     z-index: -1;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .social-area {
+    width: 3rem;
+  }
+
+  .email {
+    right: 24px;
   }
 }
