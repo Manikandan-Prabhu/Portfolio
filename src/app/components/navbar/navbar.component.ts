@@ -29,7 +29,7 @@ export class NavbarComponent {
   }
 
   downloadResume() {
-    const pdfUrl = 'assets/Manikandan Prabhu Resume.pdf';
+    const pdfUrl = 'https://raw.githubusercontent.com/Manikandan-Prabhu/Resume/master/Manikandan%20Prabhu%20Resume.pdf';
     const pdfName = 'Manikandan Prabhu Resume.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
