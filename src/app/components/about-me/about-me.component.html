@@ -1,15 +1,14 @@
 <section class="about-me flex" id="about-me" [@fadeIn]="state" appIntersectionObserver
   (isVisible)="onVisibilityChange($event)">
-  <div class="flex about-me-wrapper">
-    <div class="about-me-content flex flex-column">
 
-      <div class="section-title flex">
-        <div class="flex title-content">
-          <p>01. <span class="semibold">About me</span></p>
-        </div>
-        <div class="line"></div>
+  <div class="flex flex-column">
+    <div class="section-title flex">
+      <div class="flex title-content">
+        <p>01. <span class="semibold">About me</span></p>
       </div>
-
+      <div class="line"></div>
+    </div>
+    <div class="flex about-me-content">
       <div class="section-content">
         <p>
           Hello! My name is Manikandan Prabhu, and I love building efficient, scalable, and user-friendly web
@@ -21,7 +20,8 @@
           Over the years, I have <strong>worked on e-commerce</strong> and <strong>storefront applications</strong>,
           focusing on performance optimization,
           reusable UI components, and state management.
-          My expertise lies in <strong>Angular, TypeScript, RxJS,</strong> and <strong>front-end architecture</strong>,
+          My expertise lies in <strong>Angular, TypeScript, RxJS, NodeJS, Express</strong> and
+          <strong>PostgreSQL</strong>,
           ensuring seamless and scalable
           solutions.
         </p>
@@ -38,9 +38,9 @@
           </ng-container>
         </ul>
       </div>
-    </div>
-    <div class="about-me-img">
-      <div class="profile-img"></div>
+      <div class="about-me-img">
+        <div class="profile-img"></div>
+      </div>
     </div>
   </div>
 </section>
