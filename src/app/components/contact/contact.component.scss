@@ -1,5 +1,5 @@
 .contact {
-  height: 70vh;
+  height: 90vh;
   padding-block: 2rem;
 
   span {
@@ -17,6 +17,12 @@
     margin-block: 1.5rem;
     font-size: 12px !important;
     letter-spacing: 0.25px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 5px 5px;
+    }
   }
 }
 

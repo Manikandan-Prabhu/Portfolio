@@ -32,6 +32,12 @@
 
     .download-resume {
       letter-spacing: 0.25px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: 5px 5px;
+      }
     }
   }
 }
